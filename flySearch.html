@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Search</title>
+  <style>
+    #SearchSection{
+      border-style: solid;
+      width: 25%;
+      float: left;
+    }
+    #ResultSection{
+      border-style: solid;
+      width: 73%;
+      float: right;
+    }
+    #Details{
+      border-style: solid;
+      
+    }
+    #Slider{
+      border-style: solid;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="header">
+    <h1 style="border-style:solid; padding-left: 10px;">Flight Search Engine </h1>
+
+  </div>
+
+  <div id="SearchSection">
+    <button>Oneway</button>
+    <button>Return</button>
+    
+    
+    <div id="Details">
+      <input type="text" id="Departure" name="Departure" placeholder="Enter Origin City"><br/><br/>
+      <input type="text" id="Arrival" name="Arrival" placeholder="Enter Destination City"><br/><br/>
+      <label for="departure">Departure Date: </label>
+      <input type="date" id="GoDate" name="GoDate"><br/><br/>
+      <label for="arrival">Return Date: </label>
+      <input type="date" id="ReturnDate" name="ReturnDate"><br/><br/>
+      <label for="passengers">Passengers</label>
+            <select name="passengers" id="passengers">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select><br/><br/>
+      <button>Search</button>      
+       
+
+
+    </div><br/>
+
+
+    <div id="Slider">
+      <h4>Refine Flight Search</h4>
+      
+      <input type="range" min="0" max="10000" value="5000" id="myRange" ><br/>
+      <output >output: <span id="demo"></span></output>
+
+
+    </div>
+
+  </div>
+  <div id="ResultSection">
+    
+  </div>
+
+
+ 
+  
+</body>
+</html>
+
+<script>
+  var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
+  
+<script/> 
